@@ -1,0 +1,37 @@
+{
+  "Routes": [
+    {
+      "ServiceName": "ProductAPI",
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "ServiceName": "ProductAPI",
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/product",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "ServiceName": "OrderAPI",
+      "DownstreamPathTemplate": "/api/order/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/order/{id}",
+      "UpstreanHttpMethod": [ "GET" ]
+    },
+    {
+      "ServiceName": "OrderAPI",
+      "DownstreamPathTemplate": "/api/order",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/order",
+      "UpstreanHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "Host": "consul",
+    "Port": "8500",
+    "Type": "Consul"
+  }
+}
