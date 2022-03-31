@@ -1,0 +1,59 @@
+{
+  "Routes": [
+    {
+      "ServiceName": "ProductAPI",
+      "DownstreamPathTemplate": "/api/v1/product/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "ServiceName": "ProductAPI",
+      "DownstreamPathTemplate": "/api/v1/product",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/product",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "ServiceName": "OrderAPI",
+      "DownstreamPathTemplate": "/api/v1/order/createOrder",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/order/createOrder",
+      "UpstreanHttpMethod": [ "POST" ]
+    },
+    {
+      "ServiceName": "OrderAPI",
+      "DownstreamPathTemplate": "/api/v1/order/{userName}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/order/{userName}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    //Basket API
+    {
+      "ServiceName": "BasketAPI",
+      "DownstreamPathTemplate": "/api/v1/Basket/{userName}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Basket/{userName}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "ServiceName": "BasketAPI",
+      "DownstreamPathTemplate": "/api/v1/Basket",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Basket",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "ServiceName": "BasketAPI",
+      "DownstreamPathTemplate": "/api/v1/Basket/Checkout",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Basket/Checkout",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "Host": "consul",
+    "Port": "8500",
+    "Type": "Consul"
+  }
+}
