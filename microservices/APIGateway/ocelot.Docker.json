@@ -53,7 +53,7 @@
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {
-      "Host": "localhost",
+      "Host": "service-registry",
       "Port": 8500
     }
   }
